@@ -1,4 +1,5 @@
 
+import { Analytics } from '@vercel/analytics/next';
 import Header from "./_components/Header";
 
 import '@/app/_styles/globals.css';
@@ -28,6 +29,7 @@ export default function RootLayout({children}){
         <div className=" flex-1 px-8 py-12 grid">
           <main className=" max-w-7xl mx-auto w-full">
             <ReservationProvider>{children}</ReservationProvider>
+            <Analytics />
           </main>
         </div>
       </body>
